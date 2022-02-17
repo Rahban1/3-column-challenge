@@ -1,0 +1,152 @@
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkcyan: hsl(179, 100%, 13%);
+    --TransparentWhite : hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+    --VerylightGray: hsl(0, 0%, 95%);/* (background, headings, buttons)*/
+}
+
+/* ---------------- */
+/* RESET */
+/* ---------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p{
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--VerylightGray);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* --------------- */
+/* utility classes */
+/* --------------- */
+
+.ff-big{
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+}
+.ff-lexend{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+/* ------------- */
+/* components */
+/* ------------- */
+
+h1{
+  color: var(--VerylightGray);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center{
+  display: flex;
+}
+.card{
+  color: var(--TransparentWhite);
+  padding: 2.5em;
+  width: 15em;
+  height: 25em;
+
+}
+
+#sedans{
+  background-color: var(--BrightOrange);
+  margin-left: 2em;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+}
+#suvs{
+  background-color: var(--DarkCyan);
+}
+#luxury{
+  background-color: var(--VeryDarkcyan);
+  margin-right: 2em;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+
+.title{
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.image{
+  margin-bottom: 1.5em;
+}
+
+.text{
+  font-size: .7em;
+}
+
+.learn{
+  border-radius: 1.7em;
+  padding: 1em 2em;
+  margin-top: 6.5em;
+  border-style: none;
+  color: var(--button-color);
+  font-size: .7em;
+  font-weight: bold;
+  background-color: var(--VerylightGray);
+}
+
+.learn:hover{
+  border: 2px solid var(--VerylightGray);
+  color: var(--TransparentWhite);
+  background-color: transparent;
+}
+
+@media screen and  (max-width:660px) {
+  .center{
+    flex-direction: column;
+  }
+  #sedans{
+    background-color: var(--BrightOrange);
+    border-radius: .5em .5em 0 0 ;
+    margin: 2em 0 0 3em;
+    width: 80%;
+    
+  }
+  #luxury{
+    background-color: var(--VeryDarkcyan);
+    border-radius: 0 0 .5em .5em;
+    margin: 0 0 2em 3em;
+    width: 80%;
+  }
+  #suvs{
+    width: 80%;
+    margin-inline: 3em
+  }
+  .text{
+    font-size: 1.1em;
+  }
+}
